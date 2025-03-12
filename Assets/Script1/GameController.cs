@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public static GameController instance;
-    public float money = 500; 
+    public float money = 10f; 
 
     void Awake()
     {

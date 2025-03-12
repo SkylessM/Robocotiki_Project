@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EventManager : MonoBehaviour
 {
     public GameObject[] eventObjects; 
-    public float eventInterval = 180f; 
+    public float eventInterval = 100f; 
 
     private void Start()
     {

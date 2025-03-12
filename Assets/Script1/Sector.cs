@@ -25,6 +25,8 @@ public class Sector : MonoBehaviour
             GameController.instance.AddMoney(-sectorPrice); 
             sectorObjects.SetActive(true); 
             buyButton.gameObject.SetActive(false); 
+            isUnlocked = true; 
+
             InvokeRepeating("GenerateIncome", 1f, 1f); 
         }
     }
@@ -33,7 +35,7 @@ public class Sector : MonoBehaviour
     {
         if (isUnlocked)
         {
-            GameController.instance.AddMoney(incomePerSecond); 
+            GameController.instance.AddMoney(incomePerSecond);
         }
     }
 }

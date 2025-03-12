@@ -16,7 +16,7 @@ public class LoseScript : MonoBehaviour
     
     private void Update()
     {
-        if (gameController.money <= 0) 
+        if (gameController.money < 0) 
         {
             ShowLosePanel();
         }
