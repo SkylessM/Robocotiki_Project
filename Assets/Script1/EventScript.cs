@@ -24,6 +24,7 @@ public class EventScript : MonoBehaviour
             gameController.SpendMoney(-costToSubtract);
         }
         eventPanel.SetActive(false); 
+        Time.timeScale = 1f;
     }
 }
 

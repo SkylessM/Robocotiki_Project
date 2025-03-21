@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
     [SerializeField] private Text scoreText; 
-    public float money = 500; 
+    public float money = 10f; 
 
     void Awake()
     {
@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score:" + money.ToString();
+            scoreText.text = "Достаток:" + money.ToString();
         }
     }
 }

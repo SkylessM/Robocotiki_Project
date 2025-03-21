@@ -18,7 +18,7 @@ public class GameUIController : MonoBehaviour
 
     public void UpdateScore(float money)
     {
-        scoreText.text = "Score: " + money.ToString("F0");
+        scoreText.text = "Достаток: " + money.ToString();
     }
 
     public void GotoMenu()

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EventManager : MonoBehaviour
 {
     public GameObject[] eventObjects; 
-    public float eventInterval = 100f; 
+    public float eventInterval; 
 
     private void Start()
     {
@@ -14,8 +14,9 @@ public class EventManager : MonoBehaviour
         foreach (GameObject eventObj in eventObjects)
         {
             eventObj.SetActive(false);
+            
         }
-
+        //Time.timeScale = 0f;
         StartCoroutine(TriggerRandomEvent());
     }
 
