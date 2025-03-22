@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Tilemaps;
 
 public class Sector : MonoBehaviour
 {
@@ -9,14 +10,18 @@ public class Sector : MonoBehaviour
     public GameObject sectorObjects; 
     public float sectorPrice = 100f; 
     public float incomePerSecond = 10f; 
-
     private bool isUnlocked = false; 
+    [SerializeField] private Tilemap tilemapT;
+    [SerializeField] private Tilemap tilemapB;
 
     void Start()
     {
         buyButton.gameObject.SetActive(true); 
         sectorObjects.SetActive(false); 
+        tilemapT.color = Color.gray;
+        tilemapB.color = Color.gray;
     }
+
 
     public void BuySector()
     {
@@ -26,7 +31,8 @@ public class Sector : MonoBehaviour
             sectorObjects.SetActive(true); 
             buyButton.gameObject.SetActive(false); 
             isUnlocked = true; 
-
+            tilemapT.color = Color.white;
+            tilemapB.color = Color.white;
             InvokeRepeating("GenerateIncome", 1f, 1f); 
         }
     }
