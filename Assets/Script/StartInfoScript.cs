@@ -15,6 +15,7 @@ public class StartInfoScript : MonoBehaviour
     public void StartGame()
     {
       Time.timeScale = 1f;
+      GameObject.Find("SoundManager").GetComponent<SoundManager>().ButtonUpSound();
       InfoPanel.SetActive(false);
     }  
 }

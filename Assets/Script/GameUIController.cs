@@ -20,12 +20,15 @@ public class GameUIController : MonoBehaviour
    
     public void GotoMenu()
     {
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().ButtonUpSound();
         SceneManager.LoadScene("Menu"); 
+        
     }
 
     private void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().ButtonUpSound();
     }
     
 

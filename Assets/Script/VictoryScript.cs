@@ -20,6 +20,7 @@ public class VictoryScript : MonoBehaviour
         if (gameController.money >= VictoryScore) 
         {
             ShowVictoryPanel();
+            
         }
     }
 
@@ -31,12 +32,14 @@ public class VictoryScript : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f; 
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().ButtonUpSound();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void GoToMenu()
     {
         Time.timeScale = 1f; 
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().ButtonUpSound();
         SceneManager.LoadScene("Menu"); 
     }
 }

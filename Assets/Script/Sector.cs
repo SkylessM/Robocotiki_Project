@@ -29,6 +29,7 @@ public class Sector : MonoBehaviour
         {
             GameController.instance.AddMoney(-sectorPrice); 
             sectorObjects.SetActive(true); 
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().ButtonUpSound();
             buyButton.gameObject.SetActive(false); 
             isUnlocked = true; 
             tilemapT.color = Color.white;
