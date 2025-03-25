@@ -9,6 +9,7 @@ public class VictoryScript : MonoBehaviour
     public GameObject victoryPanel; 
     public GameController gameController; 
     public float VictoryScore;
+    public float VictorySector;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class VictoryScript : MonoBehaviour
     
     private void Update()
     {
-        if (gameController.money >= VictoryScore) 
+        if (gameController.money >= VictoryScore && gameController.sector ==VictorySector) 
         {
             ShowVictoryPanel();
             

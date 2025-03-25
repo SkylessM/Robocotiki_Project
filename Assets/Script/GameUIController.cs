@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameUIController : MonoBehaviour
 {
     public Text scoreText;
+    public Text sectorText;
     public Button exitButton;
     public Button restartButton;
     public static GameUIController instance;
@@ -51,5 +52,9 @@ public class GameUIController : MonoBehaviour
         {
             scoreText.text = "Достаток:" + money.ToString();
         }
+    }
+     public void UpdateSectorText(float sector)
+    {
+        sectorText.text = "Землі: " + sector.ToString();
     }
 }

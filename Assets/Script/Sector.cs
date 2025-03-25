@@ -10,6 +10,7 @@ public class Sector : MonoBehaviour
     public GameObject sectorObjects; 
     public float sectorPrice = 100f; 
     public float incomePerSecond = 10f; 
+     public float _sector = 1f;
     private bool isUnlocked = false; 
     [SerializeField] private Tilemap tilemapT;
     [SerializeField] private Tilemap tilemapB;
@@ -27,7 +28,8 @@ public class Sector : MonoBehaviour
     {
         if (GameController.instance.money >= sectorPrice)
         {
-            GameController.instance.AddMoney(-sectorPrice); 
+            GameController.instance.AddMoney(-sectorPrice);
+            GameController.instance.AddSector(_sector); 
             sectorObjects.SetActive(true); 
             GameObject.Find("SoundManager").GetComponent<SoundManager>().ButtonUpSound();
             buyButton.gameObject.SetActive(false); 

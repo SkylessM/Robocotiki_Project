@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance;
     public float money = 10f; 
+    public float sector = 0f;
 
     void Awake()
     {
@@ -30,5 +31,9 @@ public class GameController : MonoBehaviour
         money -= amount;
         GameUIController.instance.UpdateMoneyText(money);
     }
-
+    public void AddSector(float amount)
+    {
+        sector += amount;
+        GameUIController.instance.UpdateSectorText(sector);
+    }
 }
