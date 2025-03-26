@@ -304,7 +304,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u041D\u0430 \u0432\u0430\u0441 \u043D\u0430\u043F\u0430\u043B\u0438 \u0431\u0430\u043D\u0434\u0438\u0442\u0438
-    \u0456 \u043F\u043E\u0433\u0440\u0430\u0431\u0443\u0432\u0430\u043B\u0438 \u0447\u0430\u0441\u0442\u0438\u043D\u0443
+    \u0439 \u043F\u043E\u0433\u0440\u0430\u0431\u0443\u0432\u0430\u043B\u0438 \u0447\u0430\u0441\u0442\u0438\u043D\u0443
     \u043C\u0430\u0439\u043D\u0430"
 --- !u!1 &590417424228232020
 GameObject:
@@ -464,7 +464,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: -500
+  m_Text: -200
 --- !u!1 &2717722516371376971
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventButton: {fileID: 0}
   eventPanel: {fileID: 0}
-  costToSubtract: 0
+  costToSubtract: 200
 --- !u!1 &4535931531650967009
 GameObject:
   m_ObjectHideFlags: 0

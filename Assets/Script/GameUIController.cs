@@ -32,7 +32,10 @@ public class GameUIController : MonoBehaviour
         GameObject.Find("SoundManager").GetComponent<SoundManager>().ButtonUpSound();
     }
     
-
+    public void KucKuda() 
+    {
+      GameObject.Find("SoundManager").GetComponent<SoundManager>().ChickenUpSound();
+    }
 
     void Awake()
     {

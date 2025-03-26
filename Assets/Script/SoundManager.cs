@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public AudioClip ButtonSound;
+    public AudioClip ChickenClick;
    // public AudioClip VictorySound;
    // public AudioClip LoseSound;
 
@@ -12,6 +13,11 @@ public class SoundManager : MonoBehaviour
     {
       StartCoroutine(SoundPlay(ButtonSound, ButtonSound.length));
     }
+    public void ChickenUpSound()
+    {
+      StartCoroutine(SoundPlay(ChickenClick, ChickenClick.length));
+    }
+
    /* public void StartVictorySound()
     {
       StartCoroutine(SoundPlay(VictorySound, VictorySound.length));
@@ -26,7 +32,7 @@ public class SoundManager : MonoBehaviour
         AudioSource audio = gameObject.AddComponent<AudioSource>();
         audio.clip = audioClip;
         audio.pitch = Random.Range(0.9f, 1.1f);
-        audio.volume = 0.2f;
+        audio.volume = 0.4f;
         audio.loop = false;
         audio.Play();
         yield return new WaitForSeconds(time);
